@@ -1,0 +1,7 @@
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\bin\Debug\TCPServer01.exe
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\bin\Debug\TCPServer01.pdb
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.Form1.resources
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.Properties.Resources.resources
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.csproj.GenerateResource.Cache
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.exe
+C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.pdb
