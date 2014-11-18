@@ -36,19 +36,20 @@
             this.tbPayload = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnFindIPv4IP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbConsoleOutput
             // 
-            this.tbConsoleOutput.Location = new System.Drawing.Point(12, 23);
+            this.tbConsoleOutput.Location = new System.Drawing.Point(6, 7);
             this.tbConsoleOutput.Multiline = true;
             this.tbConsoleOutput.Name = "tbConsoleOutput";
-            this.tbConsoleOutput.Size = new System.Drawing.Size(683, 294);
+            this.tbConsoleOutput.Size = new System.Drawing.Size(630, 294);
             this.tbConsoleOutput.TabIndex = 0;
             // 
             // tbPort
             // 
-            this.tbPort.Location = new System.Drawing.Point(224, 323);
+            this.tbPort.Location = new System.Drawing.Point(215, 309);
             this.tbPort.Name = "tbPort";
             this.tbPort.Size = new System.Drawing.Size(100, 20);
             this.tbPort.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // tbIPAddress
             // 
-            this.tbIPAddress.Location = new System.Drawing.Point(65, 323);
+            this.tbIPAddress.Location = new System.Drawing.Point(56, 309);
             this.tbIPAddress.Name = "tbIPAddress";
             this.tbIPAddress.Size = new System.Drawing.Size(153, 20);
             this.tbIPAddress.TabIndex = 2;
@@ -64,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 326);
+            this.label1.Location = new System.Drawing.Point(3, 312);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 3;
@@ -72,9 +73,9 @@
             // 
             // btnStartListening
             // 
-            this.btnStartListening.Location = new System.Drawing.Point(65, 349);
+            this.btnStartListening.Location = new System.Drawing.Point(56, 335);
             this.btnStartListening.Name = "btnStartListening";
-            this.btnStartListening.Size = new System.Drawing.Size(259, 23);
+            this.btnStartListening.Size = new System.Drawing.Size(153, 23);
             this.btnStartListening.TabIndex = 4;
             this.btnStartListening.Text = "Start Listening";
             this.btnStartListening.UseVisualStyleBackColor = true;
@@ -82,16 +83,16 @@
             // 
             // tbPayload
             // 
-            this.tbPayload.Location = new System.Drawing.Point(503, 319);
+            this.tbPayload.Location = new System.Drawing.Point(458, 305);
             this.tbPayload.Name = "tbPayload";
-            this.tbPayload.Size = new System.Drawing.Size(192, 20);
+            this.tbPayload.Size = new System.Drawing.Size(175, 20);
             this.tbPayload.TabIndex = 5;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(503, 349);
+            this.btnSend.Location = new System.Drawing.Point(458, 335);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(192, 23);
+            this.btnSend.Size = new System.Drawing.Size(178, 23);
             this.btnSend.TabIndex = 6;
             this.btnSend.Text = "&Send";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -100,17 +101,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(450, 322);
+            this.label2.Location = new System.Drawing.Point(404, 308);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Payload:";
             // 
+            // btnFindIPv4IP
+            // 
+            this.btnFindIPv4IP.Location = new System.Drawing.Point(215, 335);
+            this.btnFindIPv4IP.Name = "btnFindIPv4IP";
+            this.btnFindIPv4IP.Size = new System.Drawing.Size(100, 23);
+            this.btnFindIPv4IP.TabIndex = 8;
+            this.btnFindIPv4IP.Text = "Find IP";
+            this.btnFindIPv4IP.UseVisualStyleBackColor = true;
+            this.btnFindIPv4IP.Click += new System.EventHandler(this.btnFindIPv4IP_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 377);
+            this.ClientSize = new System.Drawing.Size(642, 364);
+            this.Controls.Add(this.btnFindIPv4IP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.tbPayload);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.TextBox tbPayload;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnFindIPv4IP;
     }
 }
 

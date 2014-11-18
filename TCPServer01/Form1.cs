@@ -22,6 +22,36 @@ namespace TCPServer01
             InitializeComponent();
         }
 
+        IPAddress findMyIPV4Address()
+        {
+            string strThisHostName = string.Empty;
+            IPHostEntry thisHostDNSEntry = null;
+            IPAddress[] allIPsOfThisHost = null;
+            IPAddress ipv4Ret = null;
+
+            try
+            {
+                strThisHostName = System.Net.Dns.GetHostName();
+                thisHostDNSEntry = System.Net.Dns.GetHostEntry(strThisHostName);
+                allIPsOfThisHost = thisHostDNSEntry.AddressList;
+
+                for (int idx = allIPsOfThisHost.Length - 1; idx >= 0; idx--)
+                {
+                    if (allIPsOfThisHost[idx].AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        ipv4Ret = allIPsOfThisHost[idx];
+                        break;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            return ipv4Ret;
+        }
+
         private void btnStartListening_Click(object sender, EventArgs e)
         {
             IPAddress ipaddr;
@@ -54,6 +84,8 @@ namespace TCPServer01
                 mTCPClient = tcpl.EndAcceptTcpClient(iar);
 
                 printLine("Client Connected...");
+
+                tcpl.BeginAcceptTcpClient(onCompleteAcceptTcpClient, tcpl);
 
                 mRx = new byte[512];
                 mTCPClient.GetStream().BeginRead(mRx, 0, mRx.Length, onCompleteReadFromTCPClientStream, mTCPClient);
@@ -140,6 +172,28 @@ namespace TCPServer01
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnFindIPv4IP_Click(object sender, EventArgs e)
+        {
+            IPAddress ipa = null;
+            ipa = findMyIPV4Address();
+
+            if (ipa != null)
+            {
+                tbIPAddress.Text = ipa.ToString();
+            }
+        }
+
+        private void btnFindIPv4IP_Click_1(object sender, EventArgs e)
+        {
+            IPAddress ipa = null;
+
+            ipa = findMyIPV4Address();
+            if (ipa != null)
+            {
+                tbIPAddress.Text = ipa.ToString();
             }
         }
 
