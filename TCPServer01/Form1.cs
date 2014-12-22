@@ -13,6 +13,7 @@ namespace TCPServer01
 {
     public partial class Form1 : Form
     {
+        
         TcpListener mTCPListener;
         TcpClient mTCPClient;
         byte[] mRx;
