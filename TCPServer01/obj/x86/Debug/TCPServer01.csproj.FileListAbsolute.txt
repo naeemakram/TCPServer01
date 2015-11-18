@@ -6,3 +6,5 @@ C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj
 C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.exe
 C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.pdb
 C:\Users\Naeem\documents\visual studio 2010\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.csprojResolveAssemblyReference.cache
+C:\Users\Naeem Akram\Documents\Visual Studio 2015\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.exe
+C:\Users\Naeem Akram\Documents\Visual Studio 2015\Projects\TCPServer01\TCPServer01\obj\x86\Debug\TCPServer01.pdb
