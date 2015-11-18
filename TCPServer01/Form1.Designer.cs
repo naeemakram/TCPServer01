@@ -37,6 +37,8 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnFindIPv4IP = new System.Windows.Forms.Button();
+            this.lbClients = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbConsoleOutput
@@ -44,7 +46,7 @@
             this.tbConsoleOutput.Location = new System.Drawing.Point(6, 7);
             this.tbConsoleOutput.Multiline = true;
             this.tbConsoleOutput.Name = "tbConsoleOutput";
-            this.tbConsoleOutput.Size = new System.Drawing.Size(630, 294);
+            this.tbConsoleOutput.Size = new System.Drawing.Size(621, 294);
             this.tbConsoleOutput.TabIndex = 0;
             // 
             // tbPort
@@ -61,6 +63,8 @@
             this.tbIPAddress.Name = "tbIPAddress";
             this.tbIPAddress.Size = new System.Drawing.Size(153, 20);
             this.tbIPAddress.TabIndex = 2;
+            this.tbIPAddress.Text = "127.0.0.1";
+            this.tbIPAddress.TextChanged += new System.EventHandler(this.tbIPAddress_TextChanged);
             // 
             // label1
             // 
@@ -117,11 +121,30 @@
             this.btnFindIPv4IP.UseVisualStyleBackColor = true;
             this.btnFindIPv4IP.Click += new System.EventHandler(this.btnFindIPv4IP_Click_1);
             // 
+            // lbClients
+            // 
+            this.lbClients.FormattingEnabled = true;
+            this.lbClients.Location = new System.Drawing.Point(633, 25);
+            this.lbClients.Name = "lbClients";
+            this.lbClients.Size = new System.Drawing.Size(178, 264);
+            this.lbClients.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(630, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Clients:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 364);
+            this.ClientSize = new System.Drawing.Size(836, 384);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbClients);
             this.Controls.Add(this.btnFindIPv4IP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSend);
@@ -134,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "TCP Server";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +174,8 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnFindIPv4IP;
+        private System.Windows.Forms.ListBox lbClients;
+        private System.Windows.Forms.Label label3;
     }
 }
 
